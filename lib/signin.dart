@@ -16,11 +16,6 @@ class _SigninState extends State<Signin> {
               child: Column(
             children: [
               Container(height: 120, child: Image.asset("assets/logo.png")),
-              Text("F1S",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40,
-                      color: Colors.lightBlue))
             ],
           )),
           Padding(
@@ -54,17 +49,19 @@ class _SigninState extends State<Signin> {
                           borderRadius: BorderRadius.circular(40)),
                       color: Colors.lightBlue,
                       child: Container(
-                          height: 60,
-                          width: 100,
                           child: Center(
-                            child: Text(
-                              "Sign In",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                              ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 20),
+                          child: Text(
+                            "Sign In",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 25,
                             ),
-                          ))),
+                          ),
+                        ),
+                      ))),
                   SizedBox(
                     height: 30,
                   ),
@@ -78,7 +75,7 @@ class _SigninState extends State<Signin> {
                     height: 30,
                   ),
                   Text(
-                    "If you dont have account? Sign Up",
+                    "New to Anything? Sign Up",
                     style: TextStyle(
                       color: Colors.lightBlue,
                     ),

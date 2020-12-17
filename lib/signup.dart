@@ -22,11 +22,6 @@ class _SignupState extends State<Signup> {
                 child: Column(
               children: [
                 Container(height: 120, child: Image.asset("assets/logo.png")),
-                Text("F1S",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                        color: Colors.lightBlue))
               ],
             )),
             Padding(
@@ -85,17 +80,19 @@ class _SignupState extends State<Signup> {
                             borderRadius: BorderRadius.circular(40)),
                         color: Colors.lightBlue,
                         child: Container(
-                            height: 60,
-                            width: 100,
                             child: Center(
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 40, vertical: 20),
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
                               ),
-                            ))),
+                            ),
+                          ),
+                        ))),
                     SizedBox(
                       height: 30,
                     ),
