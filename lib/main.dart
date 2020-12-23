@@ -92,13 +92,32 @@ class _MyAppState extends State<MyApp> {
                                     Checkbox(value: true, onChanged: (value) {})
                                   ],
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   "Block Contact",
                                   style: TextStyle(fontSize: 15),
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   "Freeze Out",
                                   style: TextStyle(fontSize: 15),
+                                ),
+                                Slider(
+                                  activeColor: Colors.blue,
+                                  min: 0,
+                                  max: 60,
+                                  label: "Minutes",
+                                  onChangeEnd: (value) {},
+                                  onChangeStart: (value) {},
+                                  onChanged: (value) {},
+                                  value: 25,
+                                ),
+                                SizedBox(
+                                  height: 10,
                                 ),
                                 Row(
                                   mainAxisAlignment:
@@ -111,17 +130,20 @@ class _MyAppState extends State<MyApp> {
                                     Checkbox(value: true, onChanged: (value) {})
                                   ],
                                 ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      "Are You Buyer",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    Checkbox(value: true, onChanged: (value) {})
-                                  ],
+                                SizedBox(
+                                  height: 10,
                                 ),
+                                // Row(
+                                //   mainAxisAlignment:
+                                //       MainAxisAlignment.spaceBetween,
+                                //   children: [
+                                //     Text(
+                                //       "Are You Buyer",
+                                //       style: TextStyle(fontSize: 15),
+                                //     ),
+                                //     Checkbox(value: true, onChanged: (value) {})
+                                //   ],
+                                // ),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -144,7 +166,9 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         Container(
                           height: 25,
-                          width: MediaQuery.of(context).size.width / 4,
+                          constraints: BoxConstraints(
+                            minWidth: MediaQuery.of(context).size.width / 4,
+                          ),
                           decoration: BoxDecoration(
                               border:
                                   Border.all(color: Colors.white, width: 0.5)),
@@ -172,7 +196,9 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         Container(
                           height: 25,
-                          width: MediaQuery.of(context).size.width / 3,
+                          constraints: BoxConstraints(
+                            minWidth: MediaQuery.of(context).size.width / 4,
+                          ),
                           decoration: BoxDecoration(
                               border:
                                   Border.all(color: Colors.white, width: 0.5)),

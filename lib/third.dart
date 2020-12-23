@@ -55,40 +55,40 @@ class _ThirdState extends State<Third> {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Container(
-                  color: Colors.blue,
-                  width: MediaQuery.of(context).size.width - 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Completed: 3",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                        Text("Rejected: 4",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                        Text("Canceled: 7",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                      ],
-                    ),
+          Row(
+            children: [
+              Container(
+                color: Colors.blue,
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Completed: 3",
+                          style: TextStyle(
+                            color: Colors.white,
+                          )),
+                      Text("Rejected: 4",
+                          style: TextStyle(
+                            color: Colors.white,
+                          )),
+                      Text("Canceled: 7",
+                          style: TextStyle(
+                            color: Colors.white,
+                          )),
+                    ],
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
           Expanded(
             child: ListView(
               children: [
+                SizedBox(
+                  height: 15,
+                ),
                 tile(context),
                 tile(context),
                 tile(context),
@@ -105,6 +105,9 @@ class _ThirdState extends State<Third> {
                 tile(context),
                 tile(context),
                 tile(context),
+                SizedBox(
+                  height: 15,
+                ),
               ],
             ),
           )
@@ -129,15 +132,16 @@ class _ThirdState extends State<Third> {
         trailing: Column(
           children: [
             Text.rich(TextSpan(children: [
-              TextSpan(text: "Completed by :"),
+              TextSpan(text: "Completed by :", style: TextStyle(fontSize: 10)),
               TextSpan(
                   text: "Archanano",
-                  style: TextStyle(color: Colors.lightBlueAccent))
+                  style: TextStyle(color: Colors.lightBlueAccent, fontSize: 10))
             ])),
             Text.rich(TextSpan(children: [
-              TextSpan(text: "No of items :"),
+              TextSpan(text: "No of items :", style: TextStyle(fontSize: 10)),
               TextSpan(
-                  text: "5/7", style: TextStyle(color: Colors.lightBlueAccent))
+                  text: "5/7",
+                  style: TextStyle(color: Colors.lightBlueAccent, fontSize: 10))
             ]))
           ],
         ),
