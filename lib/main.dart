@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       child: ListView(
         children: [
           Container(
-            height: MediaQuery.of(context).size.width / 3,
+            constraints: BoxConstraints(),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               color: Colors.lightBlue,
@@ -35,6 +35,9 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -43,14 +46,105 @@ class _MyAppState extends State<MyApp> {
                         Icons.menu,
                         color: Colors.white,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("List"),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Text(
+                                  "Active List",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                Text(
+                                  "Recieved List",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                Text(
+                                  "Old List",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                Text(
+                                  "User ratings and reviews",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Text("Settings"),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Notification",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Checkbox(value: true, onChanged: (value) {})
+                                  ],
+                                ),
+                                Text(
+                                  "Block Contact",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                Text(
+                                  "Freeze Out",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Are You Seller",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Checkbox(value: true, onChanged: (value) {})
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Are You Buyer",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Checkbox(value: true, onChanged: (value) {})
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Visible Contact Number \nto shared person",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Checkbox(value: true, onChanged: (value) {})
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                       color: Colors.white,
                     ),
                     Row(
                       children: [
                         Container(
                           height: 25,
-                          width: MediaQuery.of(context).size.width / 3,
+                          width: MediaQuery.of(context).size.width / 4,
                           decoration: BoxDecoration(
                               border:
                                   Border.all(color: Colors.white, width: 0.5)),
@@ -144,10 +238,23 @@ class _MyAppState extends State<MyApp> {
               ],
             ),
           ),
-          tile(context),
-          tile(context),
-          tile(context),
-          tile(context),
+          Column(
+            children: [
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+              tile(context),
+            ],
+          )
         ],
       ),
     ));

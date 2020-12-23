@@ -1,6 +1,7 @@
 import 'package:anything/main.dart';
 import 'package:anything/screen.dart';
 import 'package:anything/signin.dart';
+import 'package:anything/third.dart';
 import 'package:anything/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -16,26 +17,26 @@ class _HomeState extends State<Home> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          RaisedButton(
-            child: Text("Sign in Screen"),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return Signin();
-                },
-              ));
-            },
-          ),
-          RaisedButton(
-            child: Text("Second Screen"),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return Screen2();
-                },
-              ));
-            },
-          ),
+          // RaisedButton(
+          //   child: Text("Sign in Screen"),
+          //   onPressed: () {
+          //     Navigator.push(context, MaterialPageRoute(
+          //       builder: (context) {
+          //         return Signin();
+          //       },
+          //     ));
+          //   },
+          // ),
+          // RaisedButton(
+          //   child: Text("Second Screen"),
+          //   onPressed: () {
+          //     Navigator.push(context, MaterialPageRoute(
+          //       builder: (context) {
+          //         return Screen2();
+          //       },
+          //     ));
+          //   },
+          // ),
           RaisedButton(
             child: Text("First Screen"),
             onPressed: () {
@@ -47,15 +48,25 @@ class _HomeState extends State<Home> {
             },
           ),
           RaisedButton(
-            child: Text("Signup Screen"),
+            child: Text("Third Screen"),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return Signup();
+                  return Third();
                 },
               ));
             },
-          )
+          ),
+          // RaisedButton(
+          //   child: Text("Signup Screen"),
+          //   onPressed: () {
+          //     Navigator.push(context, MaterialPageRoute(
+          //       builder: (context) {
+          //         return Signup();
+          //       },
+          //     ));
+          //   },
+          // )
         ],
       ),
     );
